@@ -17,6 +17,10 @@ a:hover {
   color: blue;
 }
 
+p {
+
+}
+
 h1 {
   text-align: center;
 }
@@ -42,19 +46,36 @@ td {
   position: fixed;
   width: 100%;
   top: 80px;
-  height: 80px;
+  height: 60px;
   background: white;
   z-index: 2;
 }
 
-#row3 {
-  margin: 15px;
-  position: absolute;
-  width: 100%;
-  top: 160px;
-  overflow: hidden;
-  z-index: 1;
+#mainBody {
+  margin-top: 150px;
 }
+
+#welcomePage {
+  position: inline-block;
+  height: 300px;
+  text-align: center;
+  vertical-align: center;
+}
+
+#searchIcon:hover {
+  -webkit-transform: rotate(180deg);
+    transform: rotate(90deg);
+}
+
+#menuIcon {
+  margin-right: 30px;
+}
+
+#menuIcon:hover {
+  -webkit-transform: rotate(180deg);
+    transform: rotate(-90deg);
+}
+
 
 /*@media #row3 {
   position: absolute;
