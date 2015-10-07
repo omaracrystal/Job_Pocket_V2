@@ -23,6 +23,7 @@ p {
 
 h1 {
   text-align: center;
+  color: green;
 }
 
 h2 {
@@ -55,16 +56,13 @@ td {
   margin-top: 150px;
 }
 
-#welcomePage {
-  position: inline-block;
-  height: 300px;
-  text-align: center;
-  vertical-align: center;
-}
-
 #searchIcon:hover {
   -webkit-transform: rotate(180deg);
     transform: rotate(90deg);
+}
+
+#searchIcon {
+  margin-left: 30px;
 }
 
 #menuIcon {
