@@ -1,8 +1,63 @@
 body {
-  padding: 50px;
+  background: white;
+  margin: 10px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  text-decoration: none !important;
+  color: black;
 }
+
+a:link {
+  color: green;
+}
+
+a:hover {
+  color: blue;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+td {
+  padding: 10px;
+}
+
+#row1 {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  height: 100px;
+  background: white;
+  z-index: 2;
+}
+
+#row2 {
+  position: fixed;
+  width: 100%;
+  top: 80px;
+  height: 80px;
+  background: white;
+  z-index: 2;
+}
+
+#row3 {
+  margin: 15px;
+  position: absolute;
+  width: 100%;
+  top: 160px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/*@media #row3 {
+  position: absolute;
+  width: 100%;
+  top: 160px;
+}*/

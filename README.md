@@ -37,4 +37,8 @@ This app, will allow job seekers to store job postings off of any site with a ur
 - http://rss-tutorial.com/index.php
 - http://techcrunch.com/2014/02/18/kimono-is-a-smarter-web-scraper-that-lets-you-api-ify-the-web-no-code-required/
 - https://www.quora.com/How-do-Pocket-app-Instapaper-Flipboard-etc-extract-articles-from-a-page
--  
+- http://themes.3rdwavemedia.com/website-templates/devaid-free-bootstrap-theme-developers/
+- http://rawgit.com/start-angular/versatile-dashboard-theme/master/dist/index.html#/login
+
+- http://tech.zumba.com/2014/08/02/angularjs-forget-jquery/
+- 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>MEAN CRUD - BEERS</title>
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/freebie-7-responsive-header-templates/assets/header-search.css">
+
+</head>
+
+<body ng-controller="myController">
+
+<!--HEADER-->
+<div id="headerContainer">
+  <!--SEARCH-->
+  <search-input></search-input>
+  <!--END SEARCH-->
+  <!--LOGO-->
+  <logo></logo>
+  <!--END LOGO-->
+  <!--NAV BAR-->
+  <nav-bar></nav-bar>
+  <!--END NAV BAR-->
+</div>
+<!--END HEADER-->
+
+
+<!--SEARCH OPTIONS PAGE-->
+<div id="searchOptionContainer>"
+  <search-options></search-options>
+</div>
+<!--END SEARCH OPTIONS PAGE-->
+
+
+<!--MY LIST PAGE-->
+<div id="myListContainer">
+  <my-list></my-list>
+</div>
+<!--END MY LIST-->
+
+
+<!--RECOMMENDATIONS PAGE-->
+<div id="recommendationsContainer">
+  <recommendations></recommendations>
+</div>
+<!--END RECOMMENDATIONS PAGE-->
+
+
+<!--FOOTER-->
+<div id="footerContainer">
+</div>
+<!--END FOOTER-->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="../js/app.js" type="text/javascript"></script>
+  <script src="../js/controllers.js" type="text/javascript"></script>
+  <script src="../js/directives.js" type="text/javascript"></script>
+  <script src="../js/filters.js" type="text/javascript"></script>
+  <script src="../js/services.js" type="text/javascript"></script>
+</body>
+</html>
