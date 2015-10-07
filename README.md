@@ -40,3 +40,4 @@ This app, will allow job seekers to store job postings off of any site with a ur
 - http://themes.3rdwavemedia.com/website-templates/devaid-free-bootstrap-theme-developers/
 - http://rawgit.com/start-angular/versatile-dashboard-theme/master/dist/index.html#/login
 - http://tech.zumba.com/2014/08/02/angularjs-forget-jquery/
+- http://www.technofattie.com/2015/03/02/nested-controllers-and-shared-data-in-angular.html

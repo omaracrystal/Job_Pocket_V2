@@ -10,3 +10,35 @@ app.directive("login", function() {
   }
 })
 
+app.directive("searchOptions", function() {
+  return {
+    retrict: 'AECM',
+    templateUrl: './views/searchOptions.html',
+    replace: true,
+    scope: {
+
+  }
+  }
+})
+
+app.directive("lists", function() {
+  return {
+    retrict: 'AECM',
+    templateUrl: './views/lists.html',
+    replace: true,
+    scope: {
+
+  }
+  }
+})
+
+// app.directive("mylist", function() {
+//   return {
+//     retrict: 'AECM',
+//     templateUrl: './views/mylist.html',
+//     replace: true,
+//     scope: {
+
+//   }
+//   }
+// })

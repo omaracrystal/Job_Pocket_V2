@@ -26,8 +26,8 @@
         <td style="width:80%">
         <!--LOGO-->
             <logo>
-                <a>
-                  <h1>{{logo}}</h1>
+                <a href="login">
+                  <h1 id="logo">{{logo}}</h1>
                 </a>
             </logo>
         </td>
@@ -44,6 +44,33 @@
   </header>
 </div>
 <!--END HEADER-->
+
+
+<!--HOVER OVER SEARCH ICON-->
+<searchBar ng-hide="true">
+  <div class="col-sm-6" id="searchBar">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="search job headlines">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go!</button>
+      </span>
+    </div>
+  </div>
+</searchBar>
+<!--HOVER OVER SEARCH ICON-->
+
+
+
+<!--HOVER OVER MENU ICON-->
+<!-- <menuDropDown id="menuDropDown">
+  <
+<ul class="dropdown-menu" role="menu" aria-labellededby="dropdownMenu"> -->
+<!--     <li><a tabindex="-1" href="#">Regular link</a></li>
+    <li><a tabindex="-1" href="#">Regular link</a></li>
+    <li><a tabindex="-1" href="#">Regular link</a></li>
+  </ul>
+</searchBar> -->
+<!--HOVER OVER MENU ICON-->
 
 
 <!--ROW 2/ LISTS-->
@@ -72,6 +99,26 @@
     <!--MY LIST PAGE-->
     <div id="myListContainer"  ng-hide="false">
         <my-list>
+              <!--URL ADD INPUT-->
+              <table style="width:100%">
+                  <tr>
+                      <td style="width:100%">
+                          <searchBar ng-hide="false">
+                            <div id="urlBar">
+                              <div class="input-group">
+                                <input type="text" class="form-control" placeholder="enter job posting url here">
+                                <span class="input-group-btn">
+                                  <button class="btn btn-default" type="button">ADD!</button>
+                                </span>
+                              </div>
+                            </div>
+                          </searchBar>
+                      </td>
+                  </tr>
+              </table>
+              <!--END URL ADD INPUT-->
+
+              <!--MY LIST-->
               <table style="width:100%">
                   <tr>
                       <td style="width:30%">
@@ -145,16 +192,16 @@
                         {{fillerText}}
                       </td>
                   </tr>
-</table>
+              </table>
         </my-list>
     </div>
     <!--END MY LIST-->
 
-    <!--RECOMMENDATIONS PAGE-->
-    <div id="recommendationsContainer" ng-hide="true">
+    <!--RECOMMENDED PAGE-->
+    <div id="recommendedContainer" ng-hide="true">
         <recommended></recommended>
     </div>
-    <!--END RECOMMENDATIONS PAGE-->
+    <!--END RECOMMENDED PAGE-->
 
 </div>
 <!-- END MAIN BODY -->
