@@ -13,6 +13,7 @@
 
 <!--HEADER-->
 <div id="row1">
+  <header>
     <table style="width:100%">
       <tr>
         <td style="width:10%">
@@ -39,55 +40,42 @@
         <!--END NAV BAR-->
         </td>
       </tr>
-    </table>
+</table>
+  </header>
 </div>
 <!--END HEADER-->
 
-<!--ROW 2-->
+
+<!--ROW 2/ LISTS-->
 <div id="row2">
-    <table style="width:100%">
-      <tr>
-        <td style="width:50%">
-            <a href="myList.html">
-              <h2>my list</h2>
-            </a>
-        </td>
-        <td style="width:50%">
-            <a href="recommendedList">
-              <h2>recommended</h2>
-            </a>
-        </td>
-      </tr>
-    </table>
+  <lists></lists>
 </div>
-<!--END ROW 2-->
+<!--END ROW 2/ LISTS-->
 
 
 <!-- MAIN BODY -->
 <div id="mainBody">
 
-    <!-- WELCOME PAGE -->
+    <!-- LOGIN/ WELCOME PAGE -->
     <div id="welcomePage" ng-hide="true">
-          <h1>welcome to job pocket!</h1>
-          <login></login>
+        <h1>welcome to job pocket!</h1>
+        <login></login>
     </div>
-    <!-- END WELCOME PAGE -->
+    <!-- END LOGIN/ WELCOME PAGE -->
 
-    <!-- SEARCH PAGE -->
-    <div id="searchOptionContainer" ng-hide="false ">
-        <search-options>
-
-        </search-options>
+    <!-- SEARCH OPTIONS PAGE -->
+    <div id="searchOptionContainer" ng-hide="true">
+        <search-options></search-options>
     </div>
-    <!-- END SEARCH PAGE -->
+    <!-- END SEARCH OPTIONS PAGE -->
 
     <!--MY LIST PAGE-->
-    <div id="myListContainer" ng-hide="true">
+    <div id="myListContainer"  ng-hide="false">
         <my-list>
-            <table style="width:100%">
+              <table style="width:100%">
                   <tr>
                       <td style="width:30%">
-                        <img ng-src="{{urlImage}}" alt="Menu Icon" height="100%" width="100%"/>
+                        <img ng-src="{{urlImage}}" alt="Menu Icon" height="90%" width="90%"/>
                       </td>
                       <td>
                         <p><h3>First one</h3></p>
@@ -96,7 +84,7 @@
                   </tr>
                   <tr>
                       <td style="width:30%">
-                        <img ng-src="{{urlImage}}" alt="Menu Icon" height="100%" width="100%"/>
+                        <img ng-src="{{urlImage}}" alt="Menu Icon" height="90%" width="90%"/>
                       </td>
                       <td>
                         <p><h3>{{headLine}}</h3></p>
@@ -105,7 +93,7 @@
                   </tr>
                   <tr>
                       <td style="width:30%">
-                        <img ng-src="{{urlImage}}" alt="Menu Icon" height="100%" width="100%"/>
+                        <img ng-src="{{urlImage}}" alt="Menu Icon" height="90%" width="90%" />
                       </td>
                       <td>
                         <p><h3>{{headLine}}</h3></p>
@@ -114,7 +102,7 @@
                   </tr>
                   <tr>
                       <td style="width:30%">
-                        <img ng-src="{{urlImage}}" alt="Menu Icon" height="100%" width="100%"/>
+                        <img ng-src="{{urlImage}}" alt="Menu Icon" height="90%" width="90%"/>
                       </td>
                       <td>
                         <p><h3>{{headLine}}</h3></p>
@@ -123,7 +111,7 @@
                   </tr>
                   <tr>
                       <td style="width:30%">
-                        <img ng-src="{{urlImage}}" alt="Menu Icon" height="100%" width="100%"/>
+                        <img ng-src="{{urlImage}}" alt="Menu Icon" height="90%" width="90%"/>
                       </td>
                       <td>
                         <p><h3>{{headLine}}</h3></p>
@@ -132,7 +120,7 @@
                   </tr>
                   <tr>
                       <td style="width:30%">
-                        <img ng-src="{{urlImage}}" alt="Menu Icon" height="100%" width="100%"/>
+                        <img ng-src="{{urlImage}}" alt="Menu Icon" height="90%" width="90%"/>
                       </td>
                       <td>
                         <p><h3>{{headLine}}</h3></p>
@@ -141,7 +129,7 @@
                   </tr>
                   <tr>
                       <td style="width:30%">
-                        <img ng-src="{{urlImage}}" alt="Menu Icon" height="100%" width="100%"/>
+                        <img ng-src="{{urlImage}}" alt="Menu Icon" height="90%" width="90%"/>
                       </td>
                       <td>
                         <p><h3>{{headLine}}</h3></p>
@@ -150,36 +138,24 @@
                   </tr>
                   <tr>
                       <td style="width:30%">
-                        <img ng-src="{{urlImage}}" alt="Menu Icon" height="100%" width="100%"/>
+                        <img ng-src="{{urlImage}}" alt="Menu Icon" height="90%" width="90%"/>
                       </td>
                       <td>
                         <p><h3>{{headLine}}</h3></p>
                         {{fillerText}}
                       </td>
                   </tr>
-            </table>
+</table>
         </my-list>
     </div>
     <!--END MY LIST-->
 
-
     <!--RECOMMENDATIONS PAGE-->
     <div id="recommendationsContainer" ng-hide="true">
-        <recommendations>
-          <table style="width:100%">
-                  <tr>
-                      <td>
-                        <p><h3>First Recommended one</h3></p>
-                        {{fillerText}}
-                      </td>
-                      <td style="width:30%">
-                        <img ng-src="{{urlImage}}" alt="Menu Icon" height="100%" width="100%"/>
-                      </td>
-                  </tr>
-          </table>
-        </recommendations>
+        <recommended></recommended>
     </div>
     <!--END RECOMMENDATIONS PAGE-->
+
 </div>
 <!-- END MAIN BODY -->
 
@@ -187,7 +163,8 @@
 
 <!--FOOTER-->
   <div id="footerContainer">
-    <table style="width:100%">
+    <footer>
+      <table style="width:100%">
       <tr>
         <td style="width:10%">
         <!--SEARCH-->
@@ -206,14 +183,15 @@
         </td>
         <!--END LOGO-->
         <td style="width:10%">
-        <!--NAV BAR-->
+          <!--NAV BAR-->
             <nav-bar>
                 <img ng-src="{{menuIcon}}" alt="Menu Icon" height="25" width="25" id="menuIcon"/>
             </nav-bar>
-        <!--END NAV BAR-->
-        </td>
-      </tr>
-    </table>
+          <!--END NAV BAR-->
+          </td>
+        </tr>
+      </table>
+    </footer>
   </div>
 <!--END FOOTER-->
 
