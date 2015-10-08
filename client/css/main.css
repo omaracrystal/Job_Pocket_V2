@@ -1,8 +1,14 @@
 body {
+    background: no-repeat fixed center center;
+    background-size: cover;
+    font-family: Montserrat;
+}
+/*
+body {
   background: white;
   margin: 10px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+}*/
 
 a {
   text-decoration: none !important;

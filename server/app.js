@@ -18,7 +18,7 @@ var app = express();
 
 
 // *** static directory *** //
-app.set('views', path.join(__dirname, 'views'));
+// app.set('views', path.join(__dirname, 'views'));
 
 
 // *** config middleware *** //
@@ -36,7 +36,7 @@ app.use('/api/v1/', apiRoutes);
 
 ///THIS IS NECESARY - unclear what it's doing
 app.use('/', function(req, res){
- res.sendFile(path.join(__dirname, '../client/views', 'index.html'));
+ res.sendFile(path.join(__dirname, '../client', 'index.html'));
 });
 
 

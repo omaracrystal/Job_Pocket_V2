@@ -2,13 +2,13 @@ var mongoose = require('mongoose');
 var Schema   = mongoose.Schema;
 
 
-var Beer = new Schema({
-  name: String,
-  type: String,
-  abv: Number
+var Job = new Schema({
+  title: String,
+  description: String,
+  date: Number
 });
 
 
 mongoose.connect(process.env.MONGO_URI);
 
-module.exports = mongoose.model('beers', Beer);
+module.exports = mongoose.model('jobs', Job);
