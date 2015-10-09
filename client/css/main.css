@@ -129,6 +129,11 @@ ul {
   padding: 0;
 }
 
+#searchOptions {
+  margin: auto;
+  margin-right: 30%;
+}
+
 /*buttons for option page*/
 #addBtn {
   background: #318736;

@@ -13,7 +13,7 @@ app.factory('AuthService',
       logout: logout,
       register: register
     });
-}]);
+
 
 function isLoggedIn() {
   if(user) {
@@ -32,11 +32,11 @@ function getUserStatus() {
 }
 
 function login(username, password) {
-
   // create a new instance of deferred
   // $q > promises library
   var deferred = $q.defer();
 
+  // var user = null;
   // send a post request to the server
   $http.post('/auth/login', {username: username, password: password})
     // handle success
@@ -68,7 +68,7 @@ function logout() {
   var deferred = $q.defer();
 
   // send a get request to the server
-  $http.get('/auh/logout')
+  $http.get('/auth/logout')
     // handle success
     .success(function (data) {
       user = false;
@@ -84,3 +84,30 @@ function logout() {
   return deferred.promise;
 
 }
+
+function register(username, password) {
+
+  // create a new instance of deferred
+  var deferred = $q.defer();
+
+  // send a post request to the server
+  $http.post('/auth/register', {username: username, password: password})
+    // handle success
+    .success(function (data, status) {
+      if(status === 200 && data.status){
+        deferred.resolve();
+      } else {
+        deferred.reject();
+      }
+    })
+    // handle error
+    .error(function (data) {
+      deferred.reject();
+    });
+
+  // return promise object
+  return deferred.promise;
+
+}
+
+}]);

@@ -5,31 +5,44 @@ app.config(function($routeProvider) {
     //login page
       .when('/', {
         templateUrl: '../views/login.html',
-        controller: 'myController'
+        controller: 'loginController',
+        access: {restricted: false}
       })
       //login successful
       .when('/list', {
         templateUrl: '../views/myList.html',
-        controller: 'myController'
+        controller: 'myController',
+        access: {restricted: true}
       })
       .when('/logout', {
-        // templateUrl: '../views/myList.html',
-        controller: 'logoutController'
+        controller: 'logoutController',
+        access: {restricted: true}
       })
       .when('/register', {
         templateUrl: '../views/register.html',
-        controller: 'registerController'
+        controller: 'registerController',
+        access: {restricted: false}
       })
       .when('/recommended', {
         templateUrl: '../views/recommended.html',
-        controller: 'myController'
+        controller: 'myController',
+        access: {restricted: true}
       })
       .when('/search', {
         templateUrl: '../views/searchOptions.html',
-        controller: 'myController'
+        controller: 'myController',
+        access: {restricted: true}
       })
     //login page
       .otherwise({redirectTo: '/'});
+});
+
+app.run(function ($rootScope, $location, $route, AuthService) {
+  $rootScope.$on('$routeChangeStart', function (event, next, current) {
+    if (next.access.restricted && AuthService.isLoggedIn() === false) {
+      $location.path('/login');
+    }
+  });
 });
 
 // app.config(function($routeProvider) {
