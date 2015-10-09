@@ -44,3 +44,6 @@ This app, will allow job seekers to store job postings off of any site with a ur
 - Routes = https://github.com/gSchool/angular-curriculum/blob/master/Unit-2/02-routing.md
 - https://spring.io/guides/tutorials/spring-security-and-angular-js/#_spring_and_angular_js_a_secure_single_page_application
 - https://github.com/mjhea0/node-request-cheerio-scraper/blob/master/scrape.js
+- https://www.webniraj.com/2015/03/16/nodejs-scraping-websites-using-request-and-cheerio/
+
+http://blog.trifork.com/2014/04/03/dynamic-web-forms-with-angularjs/
