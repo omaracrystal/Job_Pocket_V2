@@ -40,6 +40,7 @@ td {
   padding: 10px;
 }
 
+
 input {
   border-radius: 10px;
 }
@@ -127,6 +128,89 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+/*buttons for option page*/
+#addBtn {
+  background: #318736;
+  background-image: -webkit-linear-gradient(top, #318736, #1a7825);
+  background-image: -moz-linear-gradient(top, #318736, #1a7825);
+  background-image: -ms-linear-gradient(top, #318736, #1a7825);
+  background-image: -o-linear-gradient(top, #318736, #1a7825);
+  background-image: linear-gradient(to bottom, #318736, #1a7825);
+  -webkit-border-radius: 15;
+  -moz-border-radius: 15;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 1px 1px #666666;
+  -moz-box-shadow: 0px 1px 1px #666666;
+  box-shadow: 0px 1px 1px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 0px 5px 0px 5px;
+  text-decoration: none;
+}
+
+#addBtn:hover {
+  background: #20c443;
+  background-image: -webkit-linear-gradient(top, #20c443, #1b9433);
+  background-image: -moz-linear-gradient(top, #20c443, #1b9433);
+  background-image: -ms-linear-gradient(top, #20c443, #1b9433);
+  background-image: -o-linear-gradient(top, #20c443, #1b9433);
+  background-image: linear-gradient(to bottom, #20c443, #1b9433);
+  text-decoration: none;
+}
+
+#avoidBtn {
+  background: #c40606;
+  background-image: -webkit-linear-gradient(top, #c40606, #731111);
+  background-image: -moz-linear-gradient(top, #c40606, #731111);
+  background-image: -ms-linear-gradient(top, #c40606, #731111);
+  background-image: -o-linear-gradient(top, #c40606, #731111);
+  background-image: linear-gradient(to bottom, #c40606, #731111);
+  -webkit-border-radius: 15;
+  -moz-border-radius: 15;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 1px 1px #666666;
+  -moz-box-shadow: 0px 1px 1px #666666;
+  box-shadow: 0px 1px 1px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 0px 5px 0px 5px;
+  text-decoration: none;
+}
+
+#avoidBtn:hover {
+  background: #ff3838;
+  background-image: -webkit-linear-gradient(top, #ff3838, #cc0000);
+  background-image: -moz-linear-gradient(top, #ff3838, #cc0000);
+  background-image: -ms-linear-gradient(top, #ff3838, #cc0000);
+  background-image: -o-linear-gradient(top, #ff3838, #cc0000);
+  background-image: linear-gradient(to bottom, #ff3838, #cc0000);
+  text-decoration: none;
+}
+
+#deleteBtn {
+  -webkit-border-radius: 15;
+  -moz-border-radius: 15;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 1px 1px #666666;
+  -moz-box-shadow: 0px 1px 1px #666666;
+  box-shadow: 0px 1px 1px #666666;
+  font-family: Arial;
+  color: #000000;
+  font-size: 20px;
+  background: #dbdede;
+  padding: 0px 5px 0px 5px;
+  text-decoration: none;
+}
+
+#deleteBtn:hover {
+  background: #ffffff;
+  text-decoration: none;
+}
+
+/* END buttons for option page*/
 
 /*@media #row3 {
   position: absolute;

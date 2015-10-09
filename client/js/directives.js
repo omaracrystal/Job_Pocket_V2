@@ -10,6 +10,17 @@ app.directive("login", function() {
   };
 });
 
+app.directive("register", function() {
+  return {
+    retrict: 'AECM',
+    templateUrl: '../views/register.html',
+    replace: false,
+    scope: {
+
+  }
+  };
+});
+
 app.directive("searchOptions", function() {
   return {
     retrict: 'AECM',

@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var Beer = require('../models/beer.js');
+var job = require('../models/job.js');
 
-// get all beers
-router.get('/beers', function(req, res, next) {
-  Beer.find(function(err, data){
+// get all jobs
+router.get('/job', function(req, res, next) {
+  job.find(function(err, data){
     if(err){
       res.json({'message': err});
     } else {
@@ -14,9 +14,9 @@ router.get('/beers', function(req, res, next) {
 });
 
 
-// get a beer
-router.get('/beer/:id', function(req, res, next) {
-  Beer.findById(req.params.id, function(err, data){
+// get a job
+router.get('/job/:id', function(req, res, next) {
+  job.findById(req.params.id, function(err, data){
     if(err){
       res.json({'message': err});
     } else {
@@ -25,14 +25,14 @@ router.get('/beer/:id', function(req, res, next) {
   });
 });
 
-// post a beer
-router.post('/beers', function(req, res, next) {
-  newBeer = new Beer({
+// post a job
+router.post('/job', function(req, res, next) {
+  newjob = new job({
     name: req.body.name,
     type: req.body.type,
     abv: parseFloat(req.body.abv)
   });
-  newBeer.save(function(err, data){
+  newjob.save(function(err, data){
     if(err){
       res.json({'message': err});
     } else {
@@ -41,14 +41,14 @@ router.post('/beers', function(req, res, next) {
   });
 });
 
-// put a beer
-router.put('/beer/:id', function(req, res, next) {
+// put a job
+router.put('/job/:id', function(req, res, next) {
   var update = {
     name: req.body.name,
     type: req.body.type,
     abv: parseFloat(req.body.abv)
   };
-  Beer.findByIdAndUpdate(req.params.id, update, function(err, data){
+  job.findByIdAndUpdate(req.params.id, update, function(err, data){
     if(err){
       res.json({'message': err});
     } else {
@@ -57,9 +57,9 @@ router.put('/beer/:id', function(req, res, next) {
   });
 });
 
-// delete a beer
-router.delete('/beer/:id', function(req, res, next) {
-  Beer.findByIdAndRemove(req.params.id, function(err, data){
+// delete a job
+router.delete('/job/:id', function(req, res, next) {
+  job.findByIdAndRemove(req.params.id, function(err, data){
     if(err){
       res.json({'message': err});
     } else {
@@ -69,3 +69,4 @@ router.delete('/beer/:id', function(req, res, next) {
 });
 
 module.exports = router;
+
