@@ -6,44 +6,47 @@ app.config(function($routeProvider) {
       .when('/', {
         templateUrl: '../views/login.html',
         controller: 'loginController',
-        access: {restricted: false}
+        // access: {restricted: false}
       })
       //login successful
       .when('/list', {
         templateUrl: '../views/myList.html',
         controller: 'myController',
-        access: {restricted: true}
+        // access: {restricted: true}
       })
       .when('/logout', {
         controller: 'logoutController',
-        access: {restricted: true}
+        // access: {restricted: true}
       })
       .when('/register', {
         templateUrl: '../views/register.html',
         controller: 'registerController',
-        access: {restricted: false}
+        // access: {restricted: false}
       })
       .when('/recommended', {
         templateUrl: '../views/recommended.html',
         controller: 'myController',
-        access: {restricted: true}
+        // access: {restricted: true}
       })
       .when('/search', {
         templateUrl: '../views/searchOptions.html',
         controller: 'myController',
-        access: {restricted: true}
+        // access: {restricted: true}
       })
     //login page
-      .otherwise({redirectTo: '/'});
+      .otherwise({
+        redirectTo: '/',
+        // access: {restricted: false}
+      });
 });
 
-app.run(function ($rootScope, $location, $route, AuthService) {
-  $rootScope.$on('$routeChangeStart', function (event, next, current) {
-    if (next.access.restricted && AuthService.isLoggedIn() === false) {
-      $location.path('/login');
-    }
-  });
-});
+// app.run(function ($rootScope, $location, $route, AuthService) {
+//   $rootScope.$on('$routeChangeStart', function (event, next, current) {
+//     if (next.access.restricted && AuthService.isLoggedIn() === false) {
+//       $location.path('/login');
+//     }
+//   });
+// });
 
 // app.config(function($routeProvider) {
 //     $routeProvider

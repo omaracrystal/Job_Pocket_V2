@@ -23,18 +23,16 @@ app.controller("jobController", function($scope, httpFactory, $timeout){
   //ng-model='url' on input in html
   $scope.url= "";
   //
-  $scope.allJobs = [];
+  $scope.allUrls = [];
   //ng-click='getUrl' on button
   $scope.getUrl= function () {
     //single job
     console.log($scope.url);
-    $scope.allJobs.push($scope.url);
+    $scope.allUrls.push($scope.url);
     //all jobs
-    console.log($scope.allJobs);
+    console.log($scope.allUrls);
     $scope.url = "";
   };
-
-
 
 });
 
