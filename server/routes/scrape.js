@@ -1,28 +1,28 @@
-var express = require('express');
-var fs = require('fs');
-var request = require('request');
-var cheerio = require('cheerio');
-var app     = express();
-var url = "http://www.imdb.com/title/tt1229340/";
+// var express = require('express');
+// var fs = require('fs');
+// var request = require('request');
+// var cheerio = require('cheerio');
+// var app     = express();
+// var url = "http://www.imdb.com/title/tt1229340/";
 
-request.post({
+// request.post({
 
-  request(url, function(err, res, body) {
-    if(err) {
-      callback.call(null, new Error('Request failed'));
-      return;
-    }
-    var $ = cheerio.load(body);
-    var text = $('#element').text();
-    // extract our data
-});
+//   request(url, function(err, res, body) {
+//     if(err) {
+//       callback.call(null, new Error('Request failed'));
+//       return;
+//     }
+//     var $ = cheerio.load(body);
+//     var text = $('#element').text();
+//     // extract our data
+// });
 
-  // do scraping
-});
+//   // do scraping
+// });
 
 
-app.listen('8081');
-exports = module.exports = app;
+// app.listen('8081');
+// exports = module.exports = app;
 
 
 // app.get('/scrape', function (req, res) {

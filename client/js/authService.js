@@ -35,6 +35,7 @@ function login(username, password) {
   // create a new instance of deferred
   // $q > promises library
   var deferred = $q.defer();
+  console.log("auth service login");
 
   // var user = null;
   // send a post request to the server

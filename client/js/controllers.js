@@ -44,7 +44,6 @@ app.controller('loginController',
     // console.log(AuthService.getUserStatus());
 
     $scope.login = function () {
-
       // initial values
       $scope.error = false;
       $scope.disabled = true;

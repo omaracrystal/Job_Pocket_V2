@@ -9,6 +9,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
 var session = require('express-session');
 
 //mongoose
@@ -45,7 +46,7 @@ app.use(express.static(path.join(__dirname, '../client')));
 // *** main routes *** //
 // app.use('/', routes);
 app.use('/api/v1/', apiRoutes);
-app.use('/auth', user);
+app.use('/auth/', user);
 
 ///THIS IS NECESARY - unclear what it's doing
 app.get('/', function(req, res){
@@ -53,6 +54,10 @@ app.get('/', function(req, res){
  res.sendFile(path.join(__dirname, '../client', 'index.html'));
 });
 
+//passport
+// passport.use(new LocalStrategy(User.authenticate()));
+// passport.serializeUser(User.serializeUser());
+// passport.deserializeUser(User.deserializeUser());
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

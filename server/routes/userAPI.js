@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var passport = require('passport');
+var local = require('passport-local');
 var User = require('../models/user.js');
 
 
@@ -16,7 +17,9 @@ router.post('/register', function(req, res) {
 });
 
 router.post('/login', function(req, res, next) {
+  console.log("LOGIN");
   passport.authenticate('local', function(err, user, info) {
+      console.log("here?")
     if (err) {
       return next(err);
     }
