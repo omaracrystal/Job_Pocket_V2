@@ -2,7 +2,7 @@
 app.directive("login", function() {
   return {
     retrict: 'AECM',
-    templateUrl: '../views/login.html',
+    templateUrl: '../partials/login.html',
     replace: false,
     scope: {
 
@@ -13,7 +13,7 @@ app.directive("login", function() {
 app.directive("register", function() {
   return {
     retrict: 'AECM',
-    templateUrl: '../views/register.html',
+    templateUrl: '../partials/register.html',
     replace: false,
     scope: {
 
@@ -24,7 +24,7 @@ app.directive("register", function() {
 app.directive("searchOptions", function() {
   return {
     retrict: 'AECM',
-    templateUrl: './views/searchOptions.html',
+    templateUrl: './partials/searchOptions.html',
     replace: false,
     scope: {
 
@@ -35,7 +35,7 @@ app.directive("searchOptions", function() {
 app.directive("lists", function() {
   return {
     retrict: 'AECM',
-    templateUrl: './views/lists.html',
+    templateUrl: './partials/lists.html',
     replace: false,
     scope: {
 
@@ -46,7 +46,7 @@ app.directive("lists", function() {
 app.directive("myList", function() {
   return {
     retrict: 'AECM',
-    templateUrl: './views/myList.html',
+    templateUrl: './partials/myList.html',
     replace: false,
     scope: {
 
@@ -57,7 +57,7 @@ app.directive("myList", function() {
 app.directive("recommended", function() {
   return {
     retrict: 'AECM',
-    templateUrl: './views/recommended.html',
+    templateUrl: './partials/recommended.html',
     replace: false,
     scope: {
 

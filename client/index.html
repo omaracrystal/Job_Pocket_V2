@@ -13,11 +13,10 @@
 
 <body ng-controller="myController">
 
-<div ng-include="'views/header.html'"></div>
-
+<div ng-include="'partials/header.html'"></div>
 
 <!--ROW 2/ LISTS-->
-<div id="row2">
+<div id="row2" ng-show="lists">
   <lists></lists>
 </div>
 <!--END ROW 2/ LISTS-->
@@ -27,25 +26,25 @@
 <div id="mainBody" ng-view>
 
     <!-- LOGIN/ WELCOME PAGE -->
-    <div id="welcomePage">
+    <div>
         <login></login>
     </div>
     <!-- END LOGIN/ WELCOME PAGE -->
 
     <!-- SEARCH OPTIONS PAGE -->
-    <div id="searchOptionContainer">
+    <div>
         <search-options></search-options>
     </div>
     <!-- END SEARCH OPTIONS PAGE -->
 
     <!--MY LIST PAGE-->
-    <div id="myListContainer">
+    <div ng-show="lists=true">
         <my-list></my-list>
     </div>
     <!--END MY LIST PAGE-->
 
     <!--RECOMMENDED PAGE-->
-    <div id="recommendedPage">
+    <div ng-show="lists=true">
         <recommended></recommended>
     </div>
     <!--END RECOMMENDED PAGE-->
@@ -54,7 +53,7 @@
 <!-- END MAIN BODY = (4 PAGES: LOGIN, SEARCH OPTIONS, MY LIST, RECOMMENDED)-->
 
 
-<div ng-include="'views/footer.html'"></div>
+<!-- <div ng-include="'partials/footer.html'"></div> -->
 
 
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>

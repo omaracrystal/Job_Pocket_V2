@@ -1,4 +1,7 @@
 <div ng-controller="jobController">
+
+<div ng-include="'partials/header2.html'"></div>
+
 <!--ROW 2/ LISTS-->
 <div id="row2">
   <lists></lists>
@@ -24,15 +27,16 @@
 </table>
 <!--END URL ADD INPUT-->
 
-<table style="width:100%">
-    <tr ng-repeat="url in allUrls" class="url">
+<table style="width:100%" id="mylist">
+    <tr ng-repeat="url in allUrls | filter:searchList" class="url">
         <td style="width:30%">
-            <img ng-src="{{urlImage}}" alt="Menu Icon" height="100%" width="100%" />
+            <img ng-src="{{urlimage}}" alt="Menu Icon" height="100%" width="100%" style="padding-top:20px;" />
         </td>
         <td>
-            <p><h3>{{url.headline}}</h3></p>
-            {{url}}
-            {{url.description}}
+            <p><h3>{{url}}</h3></p>
+            {{fillerText}}
         </td>
     </tr>
 </table>
+
+</div>

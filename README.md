@@ -57,3 +57,8 @@ show collections
 db.accounts.find().pretty()
 ``
 
+##scraping
+- Yahoo YQL : https://developer.yahoo.com/yql/console/?q=show%20tables&env=store://datatables.org/alltableswithkeys#h=select%20*%20from%20data.html.cssselect%20where%20url%3D%22www.yahoo.com%22%20and%20css%3D%22%23news%20a%22
+- Node.io Scraping https://github.com/chriso/node.io/wiki/Scraping
+- Screen scraping with nodejs http://code.tutsplus.com/tutorials/screen-scraping-with-nodejs--net-25560
+

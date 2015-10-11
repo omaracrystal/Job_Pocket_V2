@@ -1,0 +1,39 @@
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<!-- <div class="logo"></div>
+<h1>Welcome to Job Pocket</h1>
+<div class="login-block">
+    <h1>Login</h1>
+    <input type="text" value="" placeholder="Username" id="username" />
+    <input type="password" value="" placeholder="Password" id="password" />
+    <button>Submit</button>
+</div>
+ -->
+
+<div class="login-block" id="loginPage">
+
+  <h2>Welcome to Job Pocket!</h2>
+
+  <div ng-show="error" class="alert alert-danger"></div>
+
+  <form class="form" ng-submit="login()">
+
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="username" name="username" ng-model="loginForm.username" id="username" required>
+    </div>
+
+    <div class="form-group">
+        <input type="password" class="form-control" placeholder="password" name="password" ng-model="loginForm.password" id="password"required>
+    </div>
+
+    <div>
+      <button type="submit" class="btn btn-default" ng-disabled="disabled">Login</button>
+    </div>
+
+  </form>
+
+      <h4>OR</h4>
+      <a href="/#/register">
+      <button class="btn btn-default">Register</button>
+      </a>
+
+</div>

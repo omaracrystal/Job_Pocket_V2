@@ -4,13 +4,13 @@ app.config(function($routeProvider) {
     $routeProvider
     //login page
       .when('/', {
-        templateUrl: '../views/login.html',
+        templateUrl: '../partials/login.html',
         controller: 'loginController',
         // access: {restricted: false}
       })
       //login successful
       .when('/list', {
-        templateUrl: '../views/myList.html',
+        templateUrl: '../partials/myList.html',
         controller: 'myController',
         // access: {restricted: true}
       })
@@ -19,17 +19,17 @@ app.config(function($routeProvider) {
         // access: {restricted: true}
       })
       .when('/register', {
-        templateUrl: '../views/register.html',
+        templateUrl: '../partials/register.html',
         controller: 'registerController',
         // access: {restricted: false}
       })
       .when('/recommended', {
-        templateUrl: '../views/recommended.html',
+        templateUrl: '../partials/recommended.html',
         controller: 'myController',
         // access: {restricted: true}
       })
       .when('/search', {
-        templateUrl: '../views/searchOptions.html',
+        templateUrl: '../partials/searchOptions.html',
         controller: 'myController',
         // access: {restricted: true}
       })
@@ -51,15 +51,15 @@ app.config(function($routeProvider) {
 // app.config(function($routeProvider) {
 //     $routeProvider
 //       .when('/login', {
-//         templateUrl: '../views/myList.html',
+//         templateUrl: '../partials/myList.html',
 //         controller: 'myController'
 //       })
 //       .when('/recommended', {
-//         templateUrl: '../views/recommended.html',
+//         templateUrl: '../partials/recommended.html',
 //         controller: 'myController'
 //       })
 //       .when('/search', {
-//         templateUrl: '../views/searchOptions.html',
+//         templateUrl: '../partials/searchOptions.html',
 //         controller: 'myController'
 //       });
 // });

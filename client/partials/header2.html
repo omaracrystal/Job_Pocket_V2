@@ -6,9 +6,9 @@
       <tr>
         <td style="width:10%">
         <!--SEARCH-->
-            <search-input>
-                    <img ng-src="{{searchIcon}}" alt="Search Icon" height="50" width="50" id="searchIcon"/>
-            </search-input>
+          <search-input>
+                  <img ng-src="{{searchIcon}}" ng-mouseover="showme = showme ? false : true" ng-click="showme = true" alt="Search Icon" height="50" width="50" id="searchIcon"/>
+          </search-input>
         <!--END SEARCH-->
         </td>
         <td style="width:80%">
@@ -18,12 +18,12 @@
                   <h1 id="logo">{{logo}}</h1>
                 </a>
             </logo>
-        </td>
         <!--END LOGO-->
+        </td>
         <td style="width:10%">
         <!--NAV BAR-->
             <nav-bar>
-                <img ng-src="{{menuIcon}}" alt="Menu Icon" height="50" width="50" id="menuIcon"/>
+                <img ng-src="{{menuIcon}}" alt="Menu Icon" height="50" width="50" id="menuIcon2"/>
             </nav-bar>
         <!--END NAV BAR-->
         </td>
@@ -34,12 +34,12 @@
 <!--END HEADER-->
 
 <!--HOVER OVER SEARCH ICON-->
-<searchBar>
+<searchBar ng-show="showme">
   <div class="col-sm-6" id="searchBar">
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="search job headlines">
+      <input type="text" ng-model="searchList" class="form-control" placeholder="search list by headline">
       <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
+        <button class="btn btn-default" type="button" ng-click="showme=false">Go!</button>
       </span>
     </div>
   </div>
@@ -48,14 +48,13 @@
 
 
 <!--HOVER OVER MENU ICON-->
-<!-- <menuDropDown id="menuDropDown">
-  <
-<ul class="dropdown-menu" role="menu" aria-labellededby="dropdownMenu"> -->
-<!--     <li><a tabindex="-1" href="#">Regular link</a></li>
+<menuDropDown id="menuDropDown2">
+<ul class="dropdown-menu" role="menu" aria-labellededby="dropdownMenu">
+    <li><a tabindex="-1" href="#">Regular link</a></li>
     <li><a tabindex="-1" href="#">Regular link</a></li>
     <li><a tabindex="-1" href="#">Regular link</a></li>
   </ul>
-</searchBar> -->
+</menuDropDown>
 <!--HOVER OVER MENU ICON-->
 
 </div>

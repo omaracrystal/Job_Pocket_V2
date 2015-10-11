@@ -10,17 +10,21 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }*/
 
+.red {
+    color: red;
+}
+.blue {
+    color: blue;
+}
+.green {
+    color: green;
+}
+
+
+
 a {
   text-decoration: none !important;
   color: black;
-}
-
-a:visited {
-  color: green;
-}
-
-a:hover {
-  color: green;
 }
 
 p {
@@ -31,7 +35,12 @@ h1 {
   text-align: center;
 }
 
+
 h2 {
+  text-align: center;
+}
+
+h4 {
   text-align: center;
 }
 
@@ -50,13 +59,21 @@ ul {
 }
 
 #logo {
-  color: green;
+  color: #088A68;
 }
 
-#myList {
+#logo:hover {
+  color: #075741;
 }
 
-#recommended {
+#logoMain {
+  color: #088A68;
+  text-align: left;
+  padding-left: 30px;
+}
+
+#logoMain:hover {
+  color: #075741;
 }
 
 #row1 {
@@ -72,6 +89,7 @@ ul {
   position: fixed;
   width: 100%;
   top: 80px;
+  left: -30px;
   height: 60px;
   background: white;
   z-index: 2;
@@ -82,19 +100,32 @@ ul {
   padding: 30px;
 }
 
+#loginPage {
+  position: fixed;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -50px;
+}
+
+#mylist {
+  position: fixed;
+  margin-top: 30px;
+}
+
+
 #searchIcon:hover {
   -webkit-transform: rotate(180deg);
     transform: rotate(90deg);
 }
 
 #searchIcon {
-  margin-left: 30px;
+  margin-left: -10px;
 }
 
 #searchBar {
   position: fixed;
-  margin-top: -84px;
-  margin-left: 70px;
+  margin-top: -113px;
+  margin-left: 25px;
   width: 80%;
   z-index: 3;
 }
@@ -113,7 +144,16 @@ ul {
   margin-right: 30px;
 }
 
+#menuIcon2 {
+  margin-right: 55px;
+}
+
 #menuIcon:hover {
+  -webkit-transform: rotate(180deg);
+    transform: rotate(-90deg);
+}
+
+#menuIcon2:hover {
   -webkit-transform: rotate(180deg);
     transform: rotate(-90deg);
 }
