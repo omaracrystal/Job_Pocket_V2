@@ -6,37 +6,37 @@ app.config(function($routeProvider) {
       .when('/', {
         templateUrl: '../partials/login.html',
         controller: 'loginController',
-        // access: {restricted: false}
+        access: {restricted: false}
       })
       //login successful
       .when('/list', {
         templateUrl: '../partials/myList.html',
         controller: 'myController',
-        // access: {restricted: true}
+        access: {restricted: true}
       })
       .when('/logout', {
         controller: 'logoutController',
-        // access: {restricted: true}
+        access: {restricted: true}
       })
       .when('/register', {
         templateUrl: '../partials/register.html',
         controller: 'registerController',
-        // access: {restricted: false}
+        access: {restricted: false}
       })
       .when('/recommended', {
         templateUrl: '../partials/recommended.html',
         controller: 'myController',
-        // access: {restricted: true}
+        access: {restricted: true}
       })
       .when('/search', {
         templateUrl: '../partials/searchOptions.html',
         controller: 'myController',
-        // access: {restricted: true}
+        access: {restricted: true}
       })
     //login page
       .otherwise({
         redirectTo: '/',
-        // access: {restricted: false}
+        access: {restricted: false}
       });
 });
 
