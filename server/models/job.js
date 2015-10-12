@@ -1,14 +1,20 @@
-var mongoose = require('mongoose');
-var Schema   = mongoose.Schema;
+// var mongoose = require('mongoose');
+
+// mongoose.connect('mongodb://localhost:27017/scraper');
+
+// mongoose.connection.on('error', function() {
+//   console.error('MongoDB Connection Error. Make sure MongoDB is running.');
+// });
+
+// var ListingsSchema = new mongoose.Schema({
+//   url: String,
+//   date: {type: Date, default: Date.now()},
+//   title: {type: String, default: 'none'},
+//   email: {type: String, lowercase: true},
+//   description: String,
+//   content: String,
+//   imgSrc: String
+// });
 
 
-var Job = new Schema({
- headline: String,
- description: String,
- date: Number
-});
-
-
-// mongoose.connect(process.env.MONGO_URI);
-
-module.exports = mongoose.model('jobs', Job);
+// module.exports = mongoose.model('Listings', ListingsSchema);

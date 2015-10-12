@@ -1,65 +1,37 @@
-// var express = require('express');
-// var fs = require('fs');
 // var request = require('request');
 // var cheerio = require('cheerio');
-// var app     = express();
-// var url = "http://www.imdb.com/title/tt1229340/";
+// var url = 'https://news.ycombinator.com';
 
-// request.post({
-
-//   request(url, function(err, res, body) {
-//     if(err) {
-//       callback.call(null, new Error('Request failed'));
-//       return;
-//     }
-//     var $ = cheerio.load(body);
-//     var text = $('#element').text();
-//     // extract our data
+// request(url, function (error, response, html) {
+//   if (!error && response.statusCode == 200) {
+//     var $ = cheerio.load(html);
+//     var parsedResults = [];
+//     $('span.comhead').each(function(i, element){
+//       // Select the previous element
+//       var a = $(this).prev();
+//       // Get the rank by parsing the element two levels above the "a" element
+//       var rank = a.parent().parent().text();
+//       // Parse the link title
+//       var title = a.text();
+//       // Parse the href attribute from the "a" element
+//       var url = a.attr('href');
+//       // Get the subtext children from the next row in the HTML table.
+//       var subtext = a.parent().parent().next().children('.subtext').children();
+//       // Extract the relevant data from the children
+//       var points = $(subtext).eq(0).text();
+//       var username = $(subtext).eq(1).text();
+//       var comments = $(subtext).eq(2).text();
+//       // Our parsed meta data object
+//       var metadata = {
+//         rank: parseInt(rank),
+//         title: title,
+//         url: url,
+//         points: parseInt(points),
+//       };
+//       // Push meta-data into parsedResults array
+//       parsedResults.push(metadata);
+//     });
+//     // Log our finished parse results in the terminal
+//     console.log(parsedResults);
+//   }
 // });
-
-//   // do scraping
-// });
-
-
-// app.listen('8081');
-// exports = module.exports = app;
-
-
-// app.get('/scrape', function (req, res) {
-//   request(url, function (err, res, html) {
-//       if (!err && res.statusCode == 200) {
-//         // pass DOM to cheerio
-//         var $ = cheerio.load(html);
-//         var title, release, rating;
-//         var json = {
-//           title: "",
-//           release: "",
-//           rating: ""
-//         };
-//       console.log(json);
-
-//      $('.header').filter(function(){
-//             var data = $(this);
-//             title = data.children().first().text();
-//             release = data.children().last().children().text();
-
-//             json.title = title;
-//             json.release = release;
-//           });
-
-//           $('.star-box-giga-star').filter(function(){
-//             var data = $(this);
-//             rating = data.text();
-
-//             json.rating = rating;
-//           });
-//     }
-
-//     fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
-//           console.log('File successfully written! - Check your project directory for the output.json file');
-//         });
-
-//         res.send('Check your console!');
-//   });
-// });
-
