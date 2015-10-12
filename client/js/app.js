@@ -40,26 +40,10 @@ app.config(function($routeProvider) {
       });
 });
 
-// app.run(function ($rootScope, $location, $route, AuthService) {
-//   $rootScope.$on('$routeChangeStart', function (event, next, current) {
-//     if (next.access.restricted && AuthService.isLoggedIn() === false) {
-//       $location.path('/login');
-//     }
-//   });
-// });
+// function listsController($scope) {
 
-// app.config(function($routeProvider) {
-//     $routeProvider
-//       .when('/login', {
-//         templateUrl: '../partials/myList.html',
-//         controller: 'myController'
-//       })
-//       .when('/recommended', {
-//         templateUrl: '../partials/recommended.html',
-//         controller: 'myController'
-//       })
-//       .when('/search', {
-//         templateUrl: '../partials/searchOptions.html',
-//         controller: 'myController'
-//       });
-// });
+//     $scope.refresh = function(){
+//         alert('toto');
+//     };
+
+// }

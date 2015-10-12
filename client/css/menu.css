@@ -1,0 +1,88 @@
+/*.clearfix:after {
+    display:block;
+    clear:both;
+}*/
+
+/*----- Menu Outline -----*/
+.menu-wrap {
+    text-align: right;
+}
+
+/*.menu {
+    width: 10%;
+    margin:0px auto;
+}*/
+
+/*.menu li {
+    margin:0px;
+    list-style:none;
+}
+*/
+.menu a {
+    transition:all linear 0.15s;
+    color:#919191;
+}
+
+.menu li:hover > a, .menu .current-item > a {
+    text-decoration:none;
+    color:white;
+}
+
+.menu .arrow {
+    font-size:11px;
+    line-height:0%;
+}
+
+/*----- Top Level -----*/
+.menu > ul > li {
+    position:fixed;
+    top: 15px;
+    right: 45px;
+    font-size:19px;
+}
+
+.menu > ul > li > a {
+    padding:10px 40px;
+    display:inline-block;
+    text-shadow:0px 1px 0px rgba(0,0,0,0.4);
+}
+
+.menu > ul > li:hover > a, .menu > ul > .current-item > a {
+/*    background:#2e2728;*/
+}
+
+/*----- Bottom Level -----*/
+.menu li:hover .sub-menu {
+    z-index:1;
+    opacity:1;
+}
+
+.sub-menu {
+    border-radius: 10px;
+    width:100%;
+    padding:5px 0px;
+    position:absolute;
+    top:100%;
+    left:0px;
+    z-index:-1;
+    opacity:0;
+    transition:opacity linear 0.15s;
+    box-shadow:0px 4px 6px rgba(0,0,0,0.6);
+    background: white;
+}
+
+.sub-menu li {
+    display:block;
+    font-size:16px;
+}
+
+.sub-menu li a {
+    padding-bottom:5px;
+    padding-right: 8px;
+    display:block;
+    text-align: right;
+}
+
+.sub-menu li a:hover, .sub-menu .current-item a {
+    background:#088A68;
+}

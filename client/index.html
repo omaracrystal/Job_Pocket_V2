@@ -6,20 +6,17 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href='/css/login.css'>
+  <link rel="stylesheet" href="/css/menu.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/login.css">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
 
 </head>
 
 <body ng-controller="myController">
 
 <div ng-include="'partials/header.html'"></div>
-
-<!--ROW 2/ LISTS-->
-<div id="row2" ng-show="lists">
-  <lists></lists>
-</div>
-<!--END ROW 2/ LISTS-->
 
 
 <!-- MAIN BODY = (4 PAGES: LOGIN, SEARCH OPTIONS, MY LIST, RECOMMENDED)-->
@@ -38,13 +35,13 @@
     <!-- END SEARCH OPTIONS PAGE -->
 
     <!--MY LIST PAGE-->
-    <div ng-show="lists=true">
+    <div>
         <my-list></my-list>
     </div>
     <!--END MY LIST PAGE-->
 
     <!--RECOMMENDED PAGE-->
-    <div ng-show="lists=true">
+    <div>
         <recommended></recommended>
     </div>
     <!--END RECOMMENDED PAGE-->

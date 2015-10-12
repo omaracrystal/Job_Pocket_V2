@@ -64,4 +64,7 @@ db.accounts.find().pretty()
 - https://www.digitalocean.com/community/tutorials/how-to-use-node-js-request-and-cheerio-to-set-up-simple-web-scraping
 - http://ghostproxies.com/blog/2015/09/the-ultimate-guide-to-scraping-craigslist-data-with-software/
 - http://blog.ragingflame.co.za/2014/6/27/using-cheerio-and-mongodb-to-scrape-a-large-website
+
 -https://github.com/dwyl/node-parse-rss
+
+http://briantford.com/blog/huuuuuge-angular-apps

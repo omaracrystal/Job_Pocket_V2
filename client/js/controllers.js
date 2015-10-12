@@ -7,16 +7,22 @@ app.controller("myController", ["$scope", "httpFactory", "$timeout", function($s
 //--END HEADER SECTION--\\
 
 //--FOOTER SECTION--\\
-  $scope.contact = "contact";
+  // $scope.contact = "contact";
 //--END FOOTER SECTION--\\
 
 //--MAIN BODY/ MY LIST--\\
- $scope.headline = "Wanted UX/UI Designer";
- $scope.fillerText = "Title Amadeus Consulting is a technology consulting company located in the heart of Boulder, CO. We are looking for dynamic developers to join our fast growing team! Benefits of Amadeus Consulting: A great learning opportunity with a supportive and collaborative team environment A chance to develop cutting edge technology in dynamic project ...";
- $scope.urlImage = "../images/search_icon.png";
+ $scope.headline = "UX/Visual Designer (Denver, Co)";
+ $scope.fillerText = "Are you a User Experience/Visual Designer with strong interests and capabilities in the design and development of engaging user experiences? Do you thrive in an environment that requires strong problem solving skills and independent self-direction, coupled with an aptitude for team collaboration and open communication? Then Innovar Group would like to speak with you. Please send your resume to...";
+ $scope.urlImage = "../images/job_1.png";
 //--END MAIN BODY/ MY LIST--\\
 
+
 }]);
+
+
+// app.controller("recommendedController", ["$scope", "httpFactory", "$timeout", function($scope, httpFactory, $timeout){
+//   console.log("working!!");
+// }
 
 
 //ng-controller='jobController' on search url table in html
@@ -117,22 +123,16 @@ app.controller('registerController',
 
 }]);
 
-app.controller("searchController", ["$scope", "httpFactory", "$timeout", function($scope, httpFactory, $timeout){
+// app.controller("searchController", ["$scope", "httpFactory", "$timeout", function($scope, httpFactory, $timeout){
 
-  $scope.url = "";
+//   $scope.url = "";
 
-}]);
-
-
+// }]);
 
 
 
+// app.controller("listController", ["$scope", "httpFactory", "$timeout", function($scope, httpFactory, $timeout){
 
-
-
-
-
-app.controller("listController", ["$scope", "httpFactory", "$timeout", function($scope, httpFactory, $timeout){
 // $scope.messageSection = false;
   // $scope.jobdescription = {};
 
@@ -185,4 +185,4 @@ app.controller("listController", ["$scope", "httpFactory", "$timeout", function(
   //   httpFactory.delete(jobUrl);
   //   showMessage("job Successfully Deleted!");
   // };
-}]);
+// }]);

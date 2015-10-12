@@ -15,16 +15,13 @@ function newFeed(file) {
      var description = this.description;
      var pubDate = this.date;
      // Format however you want, I only went for link and title
-     var anItem = "<table style='width:100%''><tr><td style='width:65%'><p><h3><a href="+link+" target='_blank'>"+title+"</a><</h3></p>"+description+"</td><td>"+pubDate+"<br><img ng-src='{{urlImage}}' height='150px' style='padding-top:20px;'/></td></tr></table></div>";
+     var anItem = "<table style='width:100%''><tr><td style='width:65%'><p><h3><a href="+link+" target='_blank'>"+title+"</a><</h3>"+pubDate+"</p>"+description;
      //append to the div
      $("#content").append(anItem);
      count++;
     }
    });
  });
-};
+}
 newFeed("http://denver.craigslist.org/search/sof?format=rss");
 });
-
-
-     // "<a href='"+link+"' target='_blank'>"+title+"</a><br>"+pubDate+description;
