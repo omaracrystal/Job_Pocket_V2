@@ -34,7 +34,7 @@
 - Information to pull: Title, Description, Date-Posted, Location, Company Name, Company Contact(email, website, phone), Image, Salary/Pay
 - One click apply (if contact is available)
 - Add code for touch screen capabilities
-- add personal profile page with photo, resume, summary, experience, education, skills
+- add personal profile page with photo, resume, contact, summary, experience, education, skills
 - Add LikedIn Api to pull information automatically
 - Add option to forward url link to job pocket app
 - Add maps of location of Job
@@ -44,13 +44,13 @@
 
 ##Stretch Marketing
 - Recruiter login (charge to post jobs?)
-  - when logined has their lists for people profiles to their profile
-  - post their own jobs
-  -
+    - when login has their lists for people profiles to their profile
+    - post their own jobs
+    - message potential employees
 - Pull blogs on job relatable information (SEO)
 - Download App to phone link
 
-#Other
+##--Other
 - carosole of different list titles
 - add different types of list such as: receipes, articles, resources, movies, books, music, customs
 - each seperate list has own functionality
