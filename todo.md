@@ -42,7 +42,15 @@
 - Tweet to Companies
 - API String to PayScale for average salary for that job
 
-##Stretch
+##Stretch Marketing
 - Recruiter login (charge to post jobs?)
+  - when logined has their lists for people profiles to their profile
+  - post their own jobs
+  -
 - Pull blogs on job relatable information (SEO)
 - Download App to phone link
+
+#Other
+- carosole of different list titles
+- add different types of list such as: receipes, articles, resources, movies, books, music, customs
+- each seperate list has own functionality
