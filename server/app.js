@@ -12,6 +12,9 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var session = require('express-session');
 var User = require('./models/user.js');
+var ListingsSchema = require('./models/listing.js');
+var Mylist = require('./models/mylist.js');
+var Keywords = require('./models/keywords.js');
 
 //mongoose
 mongoose.connect('mongodb://localhost/mean-auth');

@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var job = require('../models/job.js');
+var listing = require('../models/listing.js');
 
 // get all jobs
-router.get('/job', function(req, res, next) {
-  job.find(function(err, data){
+router.get('/listing', function(req, res, next) {
+  listing.find(function(err, data){
     if(err){
       res.json({'message': err});
     } else {
@@ -14,9 +14,9 @@ router.get('/job', function(req, res, next) {
 });
 
 
-// get a job
-router.get('/job/:id', function(req, res, next) {
-  job.findById(req.params.id, function(err, data){
+// get a listing
+router.get('/listing/:id', function(req, res, next) {
+  listing.findById(req.params.id, function(err, data){
     if(err){
       res.json({'message': err});
     } else {
@@ -25,9 +25,9 @@ router.get('/job/:id', function(req, res, next) {
   });
 });
 
-// post a job
-router.post('/job', function(req, res, next) {
-  newjob = new job({
+// post a listing
+router.post('/listing', function(req, res, next) {
+  newjob = new listing({
     name: req.body.name,
     type: req.body.type,
     abv: parseFloat(req.body.abv)
@@ -41,14 +41,14 @@ router.post('/job', function(req, res, next) {
   });
 });
 
-// put a job
-router.put('/job/:id', function(req, res, next) {
+// put a listing
+router.put('/listing/:id', function(req, res, next) {
   var update = {
     name: req.body.name,
     type: req.body.type,
     abv: parseFloat(req.body.abv)
   };
-  job.findByIdAndUpdate(req.params.id, update, function(err, data){
+  listing.findByIdAndUpdate(req.params.id, update, function(err, data){
     if(err){
       res.json({'message': err});
     } else {
@@ -57,9 +57,9 @@ router.put('/job/:id', function(req, res, next) {
   });
 });
 
-// delete a job
-router.delete('/job/:id', function(req, res, next) {
-  job.findByIdAndRemove(req.params.id, function(err, data){
+// delete a listing
+router.delete('/listing/:id', function(req, res, next) {
+  listing.findByIdAndRemove(req.params.id, function(err, data){
     if(err){
       res.json({'message': err});
     } else {
@@ -69,4 +69,3 @@ router.delete('/job/:id', function(req, res, next) {
 });
 
 module.exports = router;
-
