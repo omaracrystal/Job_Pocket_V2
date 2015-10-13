@@ -21,6 +21,28 @@ app.directive("register", function() {
   };
 });
 
+app.directive("about", function() {
+  return {
+    retrict: 'AECM',
+    templateUrl: '../partials/about.html',
+    replace: false,
+    scope: {
+
+  }
+  };
+});
+
+app.directive("contact", function() {
+  return {
+    retrict: 'AECM',
+    templateUrl: '../partials/contact.html',
+    replace: false,
+    scope: {
+
+  }
+  };
+});
+
 app.directive("searchOptions", function() {
   return {
     retrict: 'AECM',

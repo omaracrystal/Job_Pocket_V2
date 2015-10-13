@@ -57,14 +57,14 @@ app.controller('loginController',
       AuthService.login($scope.loginForm.username, $scope.loginForm.password)
         // handle success
         .then(function () {
-          $location.path('/');
+          $location.path('/list');
           $scope.disabled = false;
           $scope.loginForm = {};
         })
         // handle error
         .catch(function () {
           $scope.error = true;
-          $scope.errorMessage = "Invalid username and/or password";
+          $scope.errorMessage = "Invalid username and or password";
           $scope.disabled = false;
           $scope.loginForm = {};
         });
@@ -114,7 +114,7 @@ app.controller('registerController',
         // handle error
         .catch(function () {
           $scope.error = true;
-          $scope.errorMessage = "Something went wrong!";
+          $scope.errorMessage = "Sorry! That user name is already being used";
           $scope.disabled = false;
           $scope.registerForm = {};
         });

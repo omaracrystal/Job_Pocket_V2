@@ -15,7 +15,7 @@
         <!--END LOGO-->
         <td style="width:10%">
         <!--NAV BAR-->
-            <nav-bar>
+            <nav-bar ng-mouseover="mainMenu=true">
                 <img ng-src="{{menuIcon}}" alt="Menu Icon" height="50" width="50" id="menuIcon"/>
             </nav-bar>
         <!--END NAV BAR-->
@@ -38,7 +38,7 @@
 <!--HOVER OVER MENU ICON-->
 
 <!--HOVER OVER MENU ICON-->
-<menuDropDown id="menuDropDown">
+<menuDropDown id="menuDropDown" ng-show="mainMenu" ng-mouseleave="mainMenu=false">
 <div class="menu-wrap">
     <nav class="menu">
         <ul class="clearfix">
@@ -51,9 +51,8 @@
                 <ul class="sub-menu">
                     <li><a href="#/login">Login</a></li>
                     <li><a href="#/register">Register</a></li>
-                    <li><a href="#/search">Search</a></li>
-                    <li><a href="#/list">My List</a></li>
-                    <li><a href="#/recommended">Feed</a></li>
+                    <li><a href="#/about">About</a></li>
+                    <li><a href="#/contact">Contact</a></li>
                 </ul>
             </li>
         </ul>

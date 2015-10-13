@@ -18,6 +18,16 @@ app.config(function($routeProvider) {
         controller: 'logoutController',
         access: {restricted: true}
       })
+      .when('/about', {
+        templateUrl: '../partials/about.html',
+        controller: 'registerController',
+        access: {restricted: false}
+      })
+      .when('/contact', {
+        templateUrl: '../partials/contact.html',
+        controller: 'registerController',
+        access: {restricted: false}
+      })
       .when('/register', {
         templateUrl: '../partials/register.html',
         controller: 'registerController',

@@ -143,7 +143,12 @@ ul {
 
 #menuDropDown {
   position: fixed;
-  z-index: 6;
+  z-index: 5;
+}
+
+#menuDropDown2 {
+  position: fixed;
+  z-index: 7;
 }
 
 #addAvoid {

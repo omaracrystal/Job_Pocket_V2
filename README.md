@@ -68,3 +68,7 @@ db.accounts.find().pretty()
 -https://github.com/dwyl/node-parse-rss
 
 http://briantford.com/blog/huuuuuge-angular-apps
+-Toggle example Angular(use for menu): http://jsfiddle.net/geniuscarrier/tKZjZ/
+
+###Atom plug ins
+-http://elijahmanor.com/github-atom-packages/
