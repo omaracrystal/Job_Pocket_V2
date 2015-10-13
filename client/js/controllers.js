@@ -41,7 +41,10 @@ app.controller("jobController", function($scope, httpFactory, $timeout){
     $scope.url = "";
   };
 
+  
+
 });
+
 
 app.controller('loginController',
   ['$scope', '$location', 'AuthService',

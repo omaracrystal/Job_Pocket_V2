@@ -15,7 +15,7 @@
         <!--END LOGO-->
         <td style="width:10%">
         <!--NAV BAR-->
-            <nav-bar ng-mouseover="mainMenu=true">
+            <nav-bar>
                 <img ng-src="{{menuIcon}}" alt="Menu Icon" height="50" width="50" id="menuIcon"/>
             </nav-bar>
         <!--END NAV BAR-->
@@ -38,7 +38,7 @@
 <!--HOVER OVER MENU ICON-->
 
 <!--HOVER OVER MENU ICON-->
-<menuDropDown id="menuDropDown" ng-show="mainMenu" ng-mouseleave="mainMenu=false">
+<menuDropDown id="menuDropDown" ng-controller="logoutController">
 <div class="menu-wrap">
     <nav class="menu">
         <ul class="clearfix">
