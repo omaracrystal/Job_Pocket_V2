@@ -49,11 +49,3 @@ app.config(function($routeProvider) {
         access: {restricted: false}
       });
 });
-
-// function listsController($scope) {
-
-//     $scope.refresh = function(){
-//         alert('toto');
-//     };
-
-// }

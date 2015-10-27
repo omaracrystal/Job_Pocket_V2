@@ -6,7 +6,7 @@ mongoose.connection.on('error', function() {
   console.error('MongoDB Connection Error. Make sure MongoDB is running.');
 });
 
-var ListingsSchema = new mongoose.Schema({
+var UrlsSchema = new mongoose.Schema({
   url: String,
   date: {type: Date, default: Date.now()},
   title: {type: String, default: 'none'},
@@ -17,4 +17,4 @@ var ListingsSchema = new mongoose.Schema({
 });
 
 
-module.exports = mongoose.model('Listings', ListingsSchema);
+module.exports = mongoose.model('Urls', UrlsSchema);

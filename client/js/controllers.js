@@ -25,7 +25,7 @@ app.controller("myController", ["$scope", "httpFactory", "$timeout", function($s
 // }
 
 
-//ng-controller='jobController' on search url table in html
+//ng-controller='urlController' on search url table in html
 app.controller("jobController", function($scope, httpFactory, $timeout){
   //ng-model='url' on input in html
   $scope.url= "";
@@ -33,15 +33,15 @@ app.controller("jobController", function($scope, httpFactory, $timeout){
   $scope.allUrls = [];
   //ng-click='getUrl' on button
   $scope.getUrl= function () {
-    //single job
+    //single url
     console.log($scope.url);
     $scope.allUrls.push($scope.url);
-    //all jobs
+    //all urls
     console.log($scope.allUrls);
     $scope.url = "";
   };
 
-  
+
 
 });
 
@@ -126,66 +126,63 @@ app.controller('registerController',
 
 }]);
 
+
+app.controller("urlController", ["$scope", "httpFactory", "$timeout", function($scope, httpFactory, $timeout){
+
+  var url = "";
+  var urls = "/urls";
+
+  geturls = function(url){
+    httpFactory.get(url)
+    .then(function(response){
+      $scope.url = response.data;
+    });
+  };
+
+  function showMessage(messageString) {
+    geturls(urls);
+    $scope.messageSection = true;
+    $scope.message = messageString;
+    $timeout(function() {
+      $scope.messageSection = false;
+    }, 5000);
+  }
+
+  geturls(urls);
+
+  $scope.posturl = function(){
+    var payload = $scope.url;
+    httpFactory.post(urls, payload);
+    $scope.url = {};
+    showMessage("Url Successfully Added!");
+  };
+
+  $scope.editurl = function(id){
+    urlUrl = "/api/v1/url/" + id;
+    httpFactory.get(url).then(function(response) {
+      $scope.url = response.data;
+    });
+    $scope.edit = true;
+  };
+
+  $scope.updateurl = function() {
+    var payload = $scope.url;
+    httpFactory.put(urlUrl, payload);
+    $scope.edit = false;
+    $scope.url = {};
+    showMessage("Url Successfully Updated!");
+  };
+
+  $scope.deleteurl = function(id) {
+    urlUrl = "/api/v1/url/" + id;
+    httpFactory.delete(url);
+    showMessage("Url Successfully Deleted!");
+  };
+}]);
+
 // app.controller("searchController", ["$scope", "httpFactory", "$timeout", function($scope, httpFactory, $timeout){
 
 //   $scope.url = "";
 
 // }]);
 
-
-
-// app.controller("listController", ["$scope", "httpFactory", "$timeout", function($scope, httpFactory, $timeout){
-
-// $scope.messageSection = false;
-  // $scope.jobdescription = {};
-
-  // var jobUrl = "";
-  // var jobsUrl = "/list";
-
-  // getjobs = function(url){
-  //   httpFactory.get(url)
-  //   .then(function(response){
-  //     $scope.jobs = response.data;
-  //   });
-  // };
-
-  // function showMessage(messageString) {
-  //   getjobs(jobsUrl);
-  //   $scope.messageSection = true;
-  //   $scope.message = messageString;
-  //   $timeout(function() {
-  //     $scope.messageSection = false;
-  //   }, 5000);
-  // }
-
-  // getjobs(jobsUrl);
-
-  // $scope.postjob = function(){
-  //   var payload = $scope.job;
-  //   httpFactory.post(jobsUrl, payload);
-  //   $scope.job = {};
-  //   showMessage("Job Successfully Added!");
-  // };
-
-  // $scope.editjob = function(id){
-  //   jobUrl = "/api/v1/job/" + id;
-  //   httpFactory.get(jobUrl).then(function(response) {
-  //     $scope.job = response.data;
-  //   });
-  //   $scope.edit = true;
-  // };
-
-  // $scope.updatejob = function() {
-  //   var payload = $scope.job;
-  //   httpFactory.put(jobUrl, payload);
-  //   $scope.edit = false;
-  //   $scope.job = {};
-  //   showMessage("job Successfully Updated!");
-  // };
-
-  // $scope.deletejob = function(id) {
-  //   jobUrl = "/api/v1/job/" + id;
-  //   httpFactory.delete(jobUrl);
-  //   showMessage("job Successfully Deleted!");
-  // };
-// }]);
