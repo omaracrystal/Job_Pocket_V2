@@ -17,19 +17,20 @@ This app, will allow job seekers to store job postings off of any site with an u
 
 ###Below are snapshots of what the app looks like currently.
 
-**Login Page**                      |  **Registration Page**
-:----------------------------------:|:----------------------------------:
-![](/client/images/login.png)       |  ![](/client/images/register.png)
+**Login Page**                      |    |**Registration Page**
+:----------------------------------:|:--:|:----------------------------------:
+![](/client/images/login.png)       |    | ![](/client/images/register.png)
 
 
-#####My List and Recommendation Pages
-![](/client/images/myList.png) ![](/client/images/feed.png)
+**My List Page**                    |    |**Recommendation Page**
+:----------------------------------:|:--:|:----------------------------------:
+![](/client/images/myList.png)      |    | ![](/client/images/feed.png)
 
-#####Search Page
-![](/client/images/search.png)
+**Search Page**                     |    |**Navigation Features**
+:----------------------------------:|:--:|:----------------------------------:
+![](/client/images/search.png)      |    | ![](/client/images/nav.png)
+                                    |    | ![](/client/images/searchBar.png)
 
-#####Navigation Features
-![](/client/images/nav.png) ![](/client/images/searchBar.png)
 
 
 ##Stretch Goals
