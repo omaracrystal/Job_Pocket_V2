@@ -1,7 +1,7 @@
 $(document).ready(function () {
   //your code here
   console.log('sanitycheck');
-  var maxEntries = 0; // if 0 then there will be no limit
+  var maxEntries = 5; // if 0 then there will be no limit
 
 function newFeed(file) {
  $.getJSON("http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20xml%20where%20url%3D%22"+encodeURIComponent(file)+"%22&format=json&callback=?", function(d) {
@@ -15,7 +15,7 @@ function newFeed(file) {
      var description = this.description;
      var pubDate = this.date;
      // Format however you want, I only went for link and title
-     var anItem = "<table style='width:100%''><tr><td style='width:65%'><p><h3><a href="+link+" target='_blank'>"+title+"</a><</h3>"+pubDate+"</p>"+description;
+     var anItem = "<table style='width:100%'><tr><td style='width:65%'><p><h3><a href="+link+" target='_blank'>"+title+"</a></h3>"+pubDate+"</p>"+description+"</td></tr></table>"
      //append to the div
      $("#content").append(anItem);
      count++;

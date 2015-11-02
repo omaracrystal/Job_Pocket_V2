@@ -41,6 +41,8 @@ ul {
   list-style: none;
 }
 
+/* HEADER SECTION */
+
 #logo {
   color: #088A68;
 }
@@ -68,6 +70,8 @@ ul {
   z-index: 2;
 }
 
+/* END HEADER SECTION */
+
 #row2 {
   position: fixed;
   width: 100%;
@@ -84,7 +88,7 @@ ul {
 }
 
 #loginPage {
-  position: fixed;
+  position: relative;
   margin-right: auto;
   margin-left: auto;
   margin-top: -50px;
@@ -151,12 +155,16 @@ ul {
   z-index: 7;
 }
 
+
+/* OPTION PAGE */
 #addAvoid {
   margin: 0;
   padding: 0;
 }
 
 #searchOptions {
+  position: relative;
+  margin: auto;
   min-width: 350px;
   max-width: 400px;
   background-color: white;
@@ -165,7 +173,6 @@ ul {
   border-radius: 25px
 }
 
-/*buttons for option page*/
 #addBtn {
   background: #318736;
   background-image: -webkit-linear-gradient(top, #318736, #1a7825);
@@ -246,10 +253,4 @@ ul {
   text-decoration: none;
 }
 
-/* END buttons for option page*/
-
-/*@media #row3 {
-  position: absolute;
-  width: 100%;
-  top: 160px;
-}*/
+/* END OPTION PAGE*/

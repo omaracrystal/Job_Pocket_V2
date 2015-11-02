@@ -44,10 +44,10 @@
     background-size: 16px 80px;
 }
 
-/*.login-block input#password:focus {
+.login-block input#password:focus {
     background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px bottom no-repeat;
     background-size: 16px 80px;
-}*/
+}
 
 .login-block input:active, .login-block input:focus {
     border: 1px solid #088A68;
