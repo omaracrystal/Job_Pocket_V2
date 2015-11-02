@@ -16,8 +16,11 @@ This app, will allow job seekers to store job postings off of any site with an u
 ![](client/images/Job_Pocket_strip.png)
 
 ###Below are snapshots of what the app looks like currently.
-#####Login and Registration Pages
-![](/client/images/login.png) ![](/client/images/register.png)
+
+**Login Page**                      |  **Registration Page**
+:----------------------------------:|:----------------------------------:
+![](/client/images/login.png)       |  ![](/client/images/register.png)
+
 
 #####My List and Recommendation Pages
 ![](/client/images/myList.png) ![](/client/images/feed.png)
