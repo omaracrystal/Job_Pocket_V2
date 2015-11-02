@@ -11,24 +11,23 @@ This app, will allow job seekers to store job postings off of any site with an u
 - Bootstrap
 - Request & Cheerio
 
-##Below is a mock up I created in Adobe Illustrator to start
+### Step 1: Below is a mock up I created in Adobe Illustrator
 ![](client/images/job_pocket_2_side.png)
 ![](client/images/Job_Pocket_strip.png)
 
-##Below are snapshots of what the app looks like currently.
-**Login Page/ 1st Page**
-![](/client/images/login.png)
-**Registration Page**
-![](/client/images/register.png)
-**My List Page**
-![](/client/images/myList.png)
-**Recommendation Page**
-![](/client/images/feed.png)
-**Search Page**
+###Below are snapshots of what the app looks like currently.
+#####Login and Registration Pages
+![](/client/images/login.png) ![](/client/images/register.png)
+
+#####My List and Recommendation Pages
+![](/client/images/myList.png) ![](/client/images/feed.png)
+
+#####Search Page
 ![](/client/images/search.png)
-**Navigation Features**
-![](/client/images/nav.png)
-![](/client/images/searchBar.png)
+
+#####Navigation Features
+![](/client/images/nav.png) ![](/client/images/searchBar.png)
+
 
 ##Stretch Goals
 - Add Favorite Lists
