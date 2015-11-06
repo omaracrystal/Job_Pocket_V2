@@ -33,13 +33,12 @@
 - Recommended> Search by: distance, relevance, date, employment types (full-time, part-time, contractor, intern, seasonal/temp, per diem, franchises)
 - Information to pull: Title, Description, Date-Posted, Location, Company Name, Company Contact(email, website, phone), Image, Salary/Pay
 - One click apply (if contact is available)
-- Add code for touch screen capabilities
 - add personal profile page with photo, resume, contact, summary, experience, education, skills
 - Add LikedIn Api to pull information automatically
-- Add option to forward url link to job pocket app
-- Add maps of location of Job
+- Add option to forward url link to job pocket app from email
+- Add google maps of the locations of Jobs
 - Api pull in ratings of Companies from glassdoor with link to reviews
-- Tweet to Companies
+- One click Tweet to Companies
 - API String to PayScale for average salary for that job
 
 ##Stretch Marketing
@@ -48,7 +47,8 @@
     - post their own jobs
     - message potential employees
 - Pull blogs on job relatable information (SEO)
-- Download App to phone link
+- One click Download App to phone link from website (Twilio?)
+- Chat between recruiter and user
 
 ##--Other
 - carosole of different list titles
