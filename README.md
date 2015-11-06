@@ -28,8 +28,7 @@ This app, will allow job seekers to store job postings off of any site with an u
 
 **Search Page**                     |    |**Navigation Features**
 :----------------------------------:|:--:|:----------------------------------:
-![](/client/images/search.png)      |    | ![](/client/images/nav.png)
-                                    |    | ![](/client/images/searchBar.png)
+![](/client/images/search.png)      |    | ![](/client/images/nav.png) ![](/client/images/searchBar.png)
 
 
 
