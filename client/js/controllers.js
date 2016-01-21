@@ -12,7 +12,7 @@ app.controller("myController", ["$scope", "httpFactory", "$timeout", function($s
 
 //--MAIN BODY/ MY LIST--\\
  $scope.headline = "UX/Visual Designer (Denver, Co)";
- $scope.fillerText = "Are you a User Experience/Visual Designer with strong interests and capabilities in the design and development of engaging user experiences? Do you thrive in an environment that requires strong problem solving skills and independent self-direction, coupled with an aptitude for team collaboration and open communication? Then Innovar Group would like to speak with you. Please send your resume to...";
+ $scope.fillerText = "This is dummy text for now... the link above will take you to the url you just added. Are you a User Experience/Visual Designer with strong interests and capabilities in the design and development of engaging user experiences? Then Innovar Group would like to speak with you. Please send your resume to...";
  $scope.urlImage = "../images/job_1.png";
 //--END MAIN BODY/ MY LIST--\\
 
