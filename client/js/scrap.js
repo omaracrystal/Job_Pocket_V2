@@ -4,7 +4,7 @@ $(document).ready(function () {
 
 function newFeed(file) {
   var maxEntries = 50;
- $.getJSON("http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20xml%20where%20url%3D%22"+encodeURIComponent(file)+"%22&format=json&callback=?", function(d) {
+ $.getJSON("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20xml%20where%20url%3D%22"+encodeURIComponent(file)+"%22&format=json&callback=?", function(d) {
   var count = 0;
   //grab ever rss item from the json result request
   $(d.query.results.RDF.item).each(function() {
