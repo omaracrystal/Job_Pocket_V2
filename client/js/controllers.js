@@ -16,13 +16,30 @@ app.controller("myController", ["$scope", "httpFactory", "$timeout", function($s
  $scope.urlImage = "../images/job_1.png";
 //--END MAIN BODY/ MY LIST--\\
 
+  $scope.loadfeed = function (file) {
+    var maxEntries = 50;
+    $.getJSON("http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20xml%20where%20url%3D%22"+encodeURIComponent(file)+"%22&format=json&callback=?", function(d) {
+    var count = 0;
+    //grab ever rss item from the json result request
+    $(d.query.results.RDF.item).each(function() {
+    //if set up to be infinite or the limit is not reached, keep grabbing items
+    if(maxEntries === 0 || maxEntries>count){
+      var title = this.title[1];
+      var link = this.link;
+      var description = this.description;
+      var pubDate = this.date;
+      // Format however you want, I only went for link and title
+      var anItem = "<table style='width:100%'><tr><td style='width:65%'><p><h3><a href="+link+" target='_blank'>"+title+"</a></h3>"+pubDate+"</p>"+description+"</td></tr></table>";
+      //append to the div
+      $("#content").append(anItem);
+      count++;
+      }
+   });
+  });
+  };
 
 }]);
 
-
-// app.controller("recommendedController", ["$scope", "httpFactory", "$timeout", function($scope, httpFactory, $timeout){
-//   console.log("working!!");
-// }
 
 
 //ng-controller='urlController' on search url table in html
@@ -98,29 +115,27 @@ app.controller('registerController',
   ['$scope', '$location', 'AuthService',
   function ($scope, $location, AuthService) {
 
-    console.log(AuthService.getUserStatus());
-
     $scope.register = function () {
 
-      // initial values
-      $scope.error = false;
-      $scope.disabled = true;
+    // initial values
+    $scope.error = false;
+    $scope.disabled = true;
 
-      // call register from service
-      AuthService.register($scope.registerForm.username, $scope.registerForm.password)
-        // handle success
-        .then(function () {
-          $location.path('/login');
-          $scope.disabled = false;
-          $scope.registerForm = {};
-        })
-        // handle error
-        .catch(function () {
-          $scope.error = true;
-          $scope.errorMessage = "Sorry! That user name is already being used";
-          $scope.disabled = false;
-          $scope.registerForm = {};
-        });
+    // call register from service
+    AuthService.register($scope.registerForm.username, $scope.registerForm.password)
+      // handle success
+      .then(function () {
+        $location.path('/login');
+        $scope.disabled = false;
+        $scope.registerForm = {};
+      })
+      // handle error
+      .catch(function () {
+        $scope.error = true;
+        $scope.errorMessage = "Sorry! That user name is already being used";
+        $scope.disabled = false;
+        $scope.registerForm = {};
+      });
 
     };
 
@@ -179,10 +194,4 @@ app.controller("urlController", ["$scope", "httpFactory", "$timeout", function($
     showMessage("Url Successfully Deleted!");
   };
 }]);
-
-// app.controller("searchController", ["$scope", "httpFactory", "$timeout", function($scope, httpFactory, $timeout){
-
-//   $scope.url = "";
-
-// }]);
 
